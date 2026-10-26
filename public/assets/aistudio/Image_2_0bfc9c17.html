@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-bright": "#343946",
+          "surface-container-lowest": "#080e1a",
+          "surface-container": "#1a202c",
+          "primary-fixed": "#b6ebff",
+          "inverse-surface": "#dde2f3",
+          "on-secondary": "#002e6b",
+          "surface-container-highest": "#2f3542",
+          "background": "#080e1a",
+          "on-surface": "#dde2f3",
+          "outline": "#859399",
+          "surface": "#080e1a",
+          "on-primary-container": "#00566a",
+          "on-secondary-fixed-variant": "#004397",
+          "on-surface-variant": "#94a3b8",
+          "on-tertiary-container": "#005575",
+          "tertiary-fixed-dim": "#7bd0ff",
+          "on-primary": "#003543",
+          "secondary-container": "#508eff",
+          "primary-fixed-dim": "#47d6ff",
+          "error-container": "#93000a",
+          "error": "#ffb4ab",
+          "on-tertiary-fixed": "#001e2c",
+          "secondary": "#aec6ff",
+          "outline-variant": "#1e293b",
+          "on-primary-fixed": "#001f28",
+          "on-secondary-fixed": "#001a43",
+          "on-error": "#690005",
+          "tertiary-fixed": "#c4e7ff",
+          "surface-variant": "#1e293b",
+          "surface-tint": "#00d2ff",
+          "primary-container": "#00d2ff",
+          "inverse-on-surface": "#2b303d",
+          "primary": "#00d2ff",
+          "secondary-fixed-dim": "#aec6ff",
+          "on-secondary-container": "#00275e",
+          "surface-container-high": "#162032",
+          "tertiary-container": "#0284c7",
+          "inverse-primary": "#00677f",
+          "on-primary-fixed-variant": "#004e60",
+          "secondary-fixed": "#d8e2ff",
+          "surface-dim": "#080e1a",
+          "on-tertiary-fixed-variant": "#004c69",
+          "on-tertiary": "#00354a",
+          "on-error-container": "#ffdad6",
+          "tertiary": "#38bdf8",
+          "surface-container-low": "#0e1626",
+          "on-background": "#dde2f3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "2xl": "1rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "0.75rem",
+          "space-lg": "1rem",
+          "space-xl": "1.5rem",
+          "margin-mobile": "1rem",
+          "gutter": "1rem"
+        },
+        "fontFamily": {
+          "headline-hero": ["Manrope", "sans-serif"],
+          "headline-lg": ["Manrope", "sans-serif"],
+          "headline-md": ["Manrope", "sans-serif"],
+          "headline-sm": ["Manrope", "sans-serif"],
+          "body-lg": ["DM Sans", "sans-serif"],
+          "body-md": ["DM Sans", "sans-serif"],
+          "body-sm": ["DM Sans", "sans-serif"],
+          "label-md": ["DM Sans", "sans-serif"],
+          "label-sm": ["DM Sans", "sans-serif"],
+          "title-md": ["Manrope", "sans-serif"]
+        }
+      }
+    }
+  };
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+      background-color: #080e1a;
+      color: #dde2f3;
+    }
+    .tech-glow-cyan {
+      box-shadow: 0 0 25px -4px rgba(0, 210, 255, 0.25);
+    }
+    .tech-glow-subtle {
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head><body class="bg-[#080e1a] font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200 antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-[#080e1a]/85 backdrop-blur-xl pt-safe border-b border-cyan-500/10 shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative shrink-0 flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/30 border border-cyan-400/30 shadow-[0_0_12px_rgba(0,210,255,0.25)]"><span class="material-symbols-outlined text-[20px] text-[#00d2ff]" style="font-variation-settings: 'FILL' 1;">shield</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-md text-base text-white font-bold tracking-tight truncate">ImobPro</span><span class="px-1.5 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-500/30 font-label-sm text-[10px] uppercase font-bold tracking-wider">CRM</span></div><span class="font-body-sm text-[12px] text-slate-400 truncate">Pipeline / Negócios</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificações" class="w-10 h-10 flex items-center justify-center rounded-xl text-slate-400 hover:text-cyan-300 hover:bg-slate-800/60 border border-transparent hover:border-cyan-500/20 transition-all focus:outline-none"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-cyan-400/40 shadow-[0_0_10px_rgba(0,210,255,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCihpyuHGCThIm7vnLJWIZwnWX86-Cm-DM_wKNfQ2FdiCKr1CtzBpXbOLyovQgLzI0zEtB-b0NaP-30GuiSwI7yQZl1eUuu2qt50N3Xamy0uKcrUesDc1CdBBhmIuzh6_lzZGtl16rzixlB1HpcCon01K7RWbtWF3bARO5bIcLqky3KbEDeCit4gjGrz1H1YVF9WgeH6cX1mScfl1LtuFQ6HvHmWU4Xxs4ImqTTiv6ONNF2f2COosZp"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-[#080e1a] min-h-screen"><div class="flex flex-col w-full pb-6">
+<!-- Sub-header & Metrics Overview -->
+<section class="px-margin-mobile pt-3 pb-3 bg-gradient-to-b from-[#0e1626]/80 to-[#080e1a] border-b border-cyan-500/10 mb-3">
+<div class="flex items-center justify-between gap-space-sm mb-2.5">
+<div class="flex items-center gap-space-xs min-w-0">
+<button aria-label="Voltar" class="w-10 h-10 rounded-xl flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-800/60 border border-slate-800 hover:border-cyan-500/30 transition-all -ml-1" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-[20px] text-white font-bold tracking-tight truncate ml-1">Meus Negócios</h1>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button aria-label="Buscar negócio" class="w-9 h-9 rounded-xl flex items-center justify-center text-slate-300 hover:text-cyan-300 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/60 hover:border-cyan-500/30 transition-all" id="search-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button aria-label="Filtrar" class="w-9 h-9 rounded-xl flex items-center justify-center text-slate-300 hover:text-cyan-300 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/60 hover:border-cyan-500/30 transition-all relative" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#00d2ff] shadow-[0_0_8px_#00d2ff]"></span>
+</button>
+</div>
+</div>
+<!-- Quick Stat Banner with glowing tech aesthetic -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#0e1a2f] to-slate-900/90 border border-cyan-500/25 tech-glow-subtle relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-3 relative z-10">
+<div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-400/30 flex items-center justify-center text-[#00d2ff] shadow-[0_0_15px_rgba(0,210,255,0.2)]">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-cyan-300/80 uppercase tracking-wider font-semibold">Volume em Negociação</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-[20px] text-white font-extrabold tracking-tight">R$ 8.940.000</span>
+<span class="font-label-sm text-[11px] text-emerald-400 font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]"></span>
+14 ativas
+</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-cyan-950/70 border border-cyan-500/30 text-cyan-300 font-label-sm text-[11px] font-semibold tracking-wide shadow-sm relative z-10">
+Funil Ativo
+</span>
+</div>
+</section>
+<!-- Stage Segment Pills (Quick Jump on Mobile) -->
+<div class="px-margin-mobile mb-3 overflow-x-auto no-scrollbar flex items-center gap-2" id="stage-tabs">
+<button class="stage-nav-pill active flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-cyan-500/25 to-blue-600/25 text-[#00d2ff] border border-cyan-400/40 font-label-md text-xs shrink-0 shadow-[0_0_12px_rgba(0,210,255,0.2)] transition-all font-semibold" data-index="0" onclick="scrollToStage(0)" type="button">
+<span class="w-2 h-2 rounded-full bg-[#00d2ff] shadow-[0_0_6px_#00d2ff]"></span>
+<span>Novo</span>
+<span class="px-1.5 py-0.2 rounded-full bg-cyan-950/80 border border-cyan-400/30 text-cyan-200 font-label-sm text-[10px]">3</span>
+</button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0e1626] text-slate-400 border border-slate-800 hover:border-slate-700 font-label-md text-xs shrink-0 transition-all" data-index="1" onclick="scrollToStage(1)" type="button">
+<span class="w-2 h-2 rounded-full bg-blue-400"></span>
+<span>Visita</span>
+<span class="px-1.5 py-0.2 rounded-full bg-slate-900 border border-slate-700/60 text-slate-300 font-label-sm text-[10px]">4</span>
+</button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0e1626] text-slate-400 border border-slate-800 hover:border-slate-700 font-label-md text-xs shrink-0 transition-all" data-index="2" onclick="scrollToStage(2)" type="button">
+<span class="w-2 h-2 rounded-full bg-sky-400"></span>
+<span>Proposta</span>
+<span class="px-1.5 py-0.2 rounded-full bg-slate-900 border border-slate-700/60 text-slate-300 font-label-sm text-[10px]">2</span>
+</button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0e1626] text-slate-400 border border-slate-800 hover:border-slate-700 font-label-md text-xs shrink-0 transition-all" data-index="3" onclick="scrollToStage(3)" type="button">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Fechado</span>
+<span class="px-1.5 py-0.2 rounded-full bg-slate-900 border border-slate-700/60 text-slate-300 font-label-sm text-[10px]">5</span>
+</button>
+</div>
+<!-- Mobile Swipeable Kanban Board -->
+<div class="flex gap-4 overflow-x-auto px-margin-mobile snap-x snap-mandatory scroll-smooth pb-4 no-scrollbar" id="kanban-scroll">
+<!-- Column 1: Novo -->
+<section class="kanban-col snap-start shrink-0 w-[285px] flex flex-col rounded-2xl bg-[#0c1322]/90 border border-cyan-500/15 p-3 shadow-lg">
+<div class="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#00d2ff] shadow-[0_0_8px_#00d2ff]"></span>
+<h2 class="font-title-md text-sm text-white font-bold tracking-tight">Novo</h2>
+<span class="px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-400/30 text-cyan-300 font-label-sm text-[10px] font-bold">3</span>
+</div>
+<span class="font-body-sm text-xs text-slate-400 font-medium">R$ 2.910.000</span>
+</div>
+<button class="w-full h-10 mb-3 rounded-xl bg-slate-900/90 border border-dashed border-cyan-500/30 hover:border-cyan-400/60 text-cyan-300 font-label-md text-xs flex items-center justify-center gap-1.5 hover:bg-cyan-950/40 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+Adicionar nesta etapa
+</button>
+<div class="flex flex-col gap-3">
+<!-- Lead Card 1 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative group active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Lucas Fontes</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-blue-950/80 text-blue-300 border border-blue-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">ZAP</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="High-end modern apartment interior with hardwood floors, floor-to-ceiling windows showing São Paulo city skyline, styled in warm minimal Scandinavian furniture, bathed in soft afternoon natural daylight with subtle orange decor accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI_d5GDEfzIG-hSvo7R1mPl_y5WVAu8HUiOitJFhYzGz8WCY_FUfSRPrykxtZDUWMYEo-IimyhOg6UuSqKd2hOTYEJknju3S1vVq4wh0m60jurgHfsotQOixIz_hu_jIZug4PubK5ohysz8u9GbJjc4tfeLCfHkuSZFU_Vv2yCVlUIe2dRy1yZ2GSt6ysOcHmtD5CBS6KKpsoHHteuXrjyvQtk9raorWPud5XsvmLZqYd2aYavX06A"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Apto Perdizes 98m²</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 1.450.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Hoje, 14:30
+</span>
+<a aria-label="Falar com Lucas no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990001" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+<!-- Lead Card 2 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Camila Nogueira</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-sky-950/80 text-sky-300 border border-sky-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">VivaReal</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="Luxury boutique studio apartment in Pinheiros, contemporary kitchen island with marble countertop, warm brass hardware, architectural lighting, modern art frame on warm neutral wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB05lS5plS3poK76HMRKiMkwEBzSjil-PudVw5WiSkrz3prpnCxjX7pbZ7-0PDxFA_YTvB3tOLtsJU9-4eUVEvToHj5VbOnwX2gPshLCeAYCfNZdOtmThAa-dZNrsRkXkUDpgYdp0h1m5h9ZztwFdYuaZkP4euc2fCsgUHbnG_IgkjGtZSlU7-qK8_GT3P1LRVSxILVC00zCH68LGgkOaH_bT1mVBNQuyEQMRKJEmhVvVoAc2ldYLnE"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Studio Pinheiros 42m²</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 680.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Há 1 hora
+</span>
+<a aria-label="Falar com Camila no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990002" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+<!-- Lead Card 3 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Gabriel Sampaio</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">Indicação</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="Elegant suburban townhouse facade with lush green vertical garden, security glass balcony, private driveway with sleek lighting at golden hour dusk, premium architectural finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADcrHUCI-MVgc_lnXp0YjZYCjIpZzI_m_SWX452rgvLpowyv0tJKsvMkF3Lmfx7gZPRcnPgDREp5duDfmIvCV8XjWiEm915LrMPmy1gUi64xyGFK2CMqa-K04AB74UM6jOTQ7C0hIykxPozCDTOQvoRrXDo4CJ1Q0k0a3iZyB1RPENfy_6GppcEYBEcJFexyi69-mTLJcCvXbj1lP-K6lVLWMcyAWr7p5wIANAX7bhmT3jlyxns20E"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Sobrado Vila Mariana</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 780.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Há 3 horas
+</span>
+<a aria-label="Falar com Gabriel no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990003" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Column 2: Visita -->
+<section class="kanban-col snap-start shrink-0 w-[285px] flex flex-col rounded-2xl bg-[#0c1322]/90 border border-blue-500/20 p-3 shadow-lg">
+<div class="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-400 shadow-[0_0_8px_#60a5fa]"></span>
+<h2 class="font-title-md text-sm text-white font-bold tracking-tight">Visita</h2>
+<span class="px-2 py-0.5 rounded-full bg-blue-950/80 border border-blue-400/30 text-blue-300 font-label-sm text-[10px] font-bold">4</span>
+</div>
+<span class="font-body-sm text-xs text-slate-400 font-medium">R$ 3.820.000</span>
+</div>
+<button class="w-full h-10 mb-3 rounded-xl bg-slate-900/90 border border-dashed border-blue-500/30 hover:border-blue-400/60 text-blue-300 font-label-md text-xs flex items-center justify-center gap-1.5 hover:bg-blue-950/40 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+Adicionar nesta etapa
+</button>
+<div class="flex flex-col gap-3">
+<!-- Card 1 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Renata Valença</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-blue-950/80 text-blue-300 border border-blue-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">ZAP</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="Penthouse rooftop terrace with infinity edge jacuzzi, sun loungers, panoramic evening view of Ibirapuera park trees and city lights, luxury residential architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgj3Jh8ifMU3iOc8ROQ20TfmKPxxVBkFcjlwAJC9C1ngLpg8ZaESRXkuL7Bw9HwDFsQoD_GQ9L_ReXwrWs0B0V0EgV_Z1kQUj38hwps_feQlfeC_pPRQR_uPXaUFD97ScIK1rtD_qPC8E41eovVrrtOsjw8e7E5u9YC-qHtYfPwwu16xEkyFcR6P6Jk7TbqaJ7lhzSbABnaXrms_MGkzAEBfsfkgnbbm1LanVvT7tl1cRGuwSJ01By"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Cobertura Moema</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 2.900.000</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-cyan-950/50 border border-cyan-500/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00d2ff] text-[18px]">calendar_month</span>
+<span class="font-label-sm text-xs text-cyan-200 font-semibold">Agendada: Amanhã às 10h</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Há 2 horas
+</span>
+<a aria-label="Falar com Renata no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990004" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Felipe Amorim</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">Indicação</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="Spacious sunny living room with double height ceiling, architectural fluted wood paneling, designer modular sofa, large sliding glass doors leading to private garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8P8t17D03mlEOc_yYGk_UYakGGmEYzN7jqeisA-toelMQ-_B3_LzT0dZvKz8QPZhWJR_ZbUrqHiAAqtNYPoF6Ru_BSmxk1E08fPbx0xeAQbvvbUTmQ8qJkz5CoNRNvcoprRzCu9QqwSTxhwQTy2M_t8iyBG_qqZ0K_9_HP9Riy7CAvqVDh8tW5a93Wo-wHHz-UAYuUnnRfRBmKfckYvitY4sAI90dD62zQf8UH6suqYA6qk8cNW1B"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Casa Jardins 180m²</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 920.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Hoje, 11:20
+</span>
+<a aria-label="Falar com Felipe no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990005" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Column 3: Proposta -->
+<section class="kanban-col snap-start shrink-0 w-[285px] flex flex-col rounded-2xl bg-[#0c1322]/90 border border-sky-500/20 p-3 shadow-lg">
+<div class="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-sky-400 shadow-[0_0_8px_#38bdf8]"></span>
+<h2 class="font-title-md text-sm text-white font-bold tracking-tight">Proposta</h2>
+<span class="px-2 py-0.5 rounded-full bg-sky-950/80 border border-sky-400/30 text-sky-300 font-label-sm text-[10px] font-bold">2</span>
+</div>
+<span class="font-body-sm text-xs text-slate-400 font-medium">R$ 2.210.000</span>
+</div>
+<button class="w-full h-10 mb-3 rounded-xl bg-slate-900/90 border border-dashed border-sky-500/30 hover:border-sky-400/60 text-sky-300 font-label-md text-xs flex items-center justify-center gap-1.5 hover:bg-sky-950/40 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+Adicionar nesta etapa
+</button>
+<div class="flex flex-col gap-3">
+<!-- Lead Card 1 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Mariana Prado</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-blue-950/80 text-blue-300 border border-blue-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">ZAP</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="Chic open space loft with industrial exposed concrete ceilings, warm oak floors, modern kitchen with matte black cabinetry, warm soft accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfOF36KM1G36-btNjUWju0DjkQQx9SOBTtJ77H6X3bOTvlLvk092U-Ig5c-56YfBfP0mMRsLKmu4K0HHxAqvkUmd72K2tC9SXypW_EDiuqjtEJq86v3BevmZPOE30e219yif3XHEMyMBmATOdj6KdZzAwXPkThng2i-4P3SLUsB47_3g7_p2dEwLPyKp9TDV6Q4SZ2oTPzCzyB7FI37KHmNUlr639R8QsMISgb9L8toCosflMNAwzb"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Loft Vila Madalena</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 1.150.000</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-sky-950/40 border border-sky-400/30 flex items-center justify-between">
+<span class="font-label-sm text-xs text-sky-200 font-bold">Oferta: R$ 1.100.000</span>
+<span class="font-label-sm text-[11px] text-cyan-300 font-semibold">Em análise</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Ontem
+</span>
+<a aria-label="Falar com Mariana no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990006" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+<!-- Lead Card 2 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-cyan-500/20 hover:border-cyan-400/40 shadow-sm flex flex-col gap-2 relative active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-slate-500 text-[18px] cursor-grab">drag_indicator</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Thiago Barros</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-sky-950/80 text-sky-300 border border-sky-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">VivaReal</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-cyan-500/20" data-alt="Refined contemporary apartment dining area, travertine marble round table, modern curved fabric chairs, custom pendant chandelier, subtle ambient warm glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOMjsturCqY5kwnYi_1FgwoNEYPgC35HACXSW3SprreTp3JhxEnqBpkGr2NN-K_gjaSkqla6p7I08Osoy4F6T2YHvRiPVgx2e_23ebsLOkbhC549ynwjUFedGxfqcAlLW_Sjzh7OzTx1XR_FdkxVq7U4Md7fZDdE40o5U5598k_8Ii_gfHvFMijMIXIFitr8YZh3fqH1qSo7lj8UwioAGUEt14zQqhOvNya7vj_JpynygfT78811F4"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Apto Itaim Bibi 85m²</span>
+<span class="font-label-md text-sm text-[#00d2ff] font-bold">R$ 1.060.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">schedule</span>
+Ontem, 18:00
+</span>
+<a aria-label="Falar com Thiago no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990007" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Column 4: Fechado -->
+<section class="kanban-col snap-start shrink-0 w-[285px] flex flex-col rounded-2xl bg-[#0c1322]/90 border border-emerald-500/20 p-3 shadow-lg">
+<div class="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"></span>
+<h2 class="font-title-md text-sm text-white font-bold tracking-tight">Fechado</h2>
+<span class="px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-400/30 text-emerald-300 font-label-sm text-[10px] font-bold">5</span>
+</div>
+<span class="font-body-sm text-xs text-slate-400 font-medium">R$ 4.700.000</span>
+</div>
+<button class="w-full h-10 mb-3 rounded-xl bg-slate-900/90 border border-dashed border-emerald-500/30 hover:border-emerald-400/60 text-emerald-300 font-label-md text-xs flex items-center justify-center gap-1.5 hover:bg-emerald-950/40 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+Adicionar nesta etapa
+</button>
+<div class="flex flex-col gap-3">
+<!-- Lead Card 1 -->
+<article class="bg-[#10192d]/95 hover:bg-[#132039] rounded-xl p-3.5 border border-emerald-500/30 shadow-sm flex flex-col gap-2 relative opacity-95">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h3 class="font-title-md text-sm text-white font-bold truncate">Rodrigo Alencar</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-500/30 font-label-sm text-[10px] uppercase font-bold shrink-0">Indicação</span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 ring-1 ring-emerald-500/30" data-alt="Stunning glass-encased modern master suite with private leafy balcony, king bed with crisp white luxury linens, integrated walk-in closet in dark walnut finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrzZ3EzQSdw2oPzd6PHhM3-RTSMYHUMwPuQwzr3ZcXc79hxdRsq9I63ZuXsWrhOnkdgO8YmU4-7u6p01RsoDx9ySWYqTi-1s19c2E95LBRCnn8O3SudOiRRHe20coUP7hl0RVB1WaXUE3tGdy_PP58Snpapf1IcAGt97UqeymGdUKELQewzkUQyfbvRvWPDMXLavWUHrFBweYBKcEoaykThhThW_1jheafS4siP0Q_aPhqooyS2qde"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs text-slate-300 font-semibold truncate">Garden Brooklin 140m²</span>
+<span class="font-label-md text-sm text-emerald-300 font-bold">R$ 1.850.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-slate-800/60 mt-0.5">
+<span class="font-body-sm text-[11px] text-emerald-400/90 flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+Contrato assinado
+</span>
+<a aria-label="Falar com Rodrigo no WhatsApp" class="w-8 h-8 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#080e1a] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/5511999990008" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] font-bold">chat</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+</div>
+<!-- Bottom Visual Quick Action Tool -->
+<div class="px-margin-mobile pt-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#00d2ff] animate-pulse shadow-[0_0_8px_#00d2ff]"></span>
+<span class="font-body-sm text-xs text-slate-400">Sincronizado via WhatsApp Cloud API</span>
+</div>
+<button class="font-label-sm text-xs text-cyan-300 hover:text-cyan-200 font-bold hover:underline flex items-center gap-0.5" type="button">
+Ver métricas
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<script>
+  function scrollToStage(index) {
+    const kanban = document.getElementById('kanban-scroll');
+    const cols = kanban.querySelectorAll('.kanban-col');
+    if (cols[index]) {
+      cols[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    }
+    updatePills(index);
+  }
+
+  function updatePills(activeIndex) {
+    const pills = document.querySelectorAll('.stage-nav-pill');
+    pills.forEach((pill, idx) => {
+      if (idx === activeIndex) {
+        pill.className = 'stage-nav-pill active flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-cyan-500/25 to-blue-600/25 text-[#00d2ff] border border-cyan-400/40 font-label-md text-xs shrink-0 shadow-[0_0_12px_rgba(0,210,255,0.2)] transition-all font-semibold';
+      } else {
+        pill.className = 'stage-nav-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0e1626] text-slate-400 border border-slate-800 hover:border-slate-700 font-label-md text-xs shrink-0 transition-all';
+      }
+    });
+  }
+
+  // Observer to update active pill on manual touch swipe
+  const kanban = document.getElementById('kanban-scroll');
+  if (kanban) {
+    kanban.addEventListener('scroll', () => {
+      const scrollLeft = kanban.scrollLeft;
+      const colWidth = 285 + 16;
+      const index = Math.round(scrollLeft / colWidth);
+      updatePills(Math.min(Math.max(index, 0), 3));
+    }, { passive: true });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#080e1a]/95 backdrop-blur-xl border-t border-cyan-500/15 shadow-[0_-4px_24px_rgba(0,0,0,0.7)]" data-active-classes="text-[#00d2ff] font-semibold [&gt;span.active-indicator]:w-6 [&gt;span.active-indicator]:bg-[#00d2ff]"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center h-full gap-0.5 text-slate-400 hover:text-cyan-300 transition-all relative" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-[11px]">Início</span><span class="active-indicator absolute bottom-1 h-1 w-0 rounded-full transition-all duration-300"></span></a><a class="flex-1 flex flex-col items-center justify-center h-full gap-0.5 text-[#00d2ff] font-semibold transition-all relative" data-path="pipeline-negocios" href="#"><span class="material-symbols-outlined text-[22px] shadow-[0_0_12px_rgba(0,210,255,0.4)]">view_kanban</span><span class="font-label-sm text-[11px]">Negócios</span><span class="active-indicator absolute bottom-1 h-1 w-6 rounded-full bg-[#00d2ff] shadow-[0_0_8px_#00d2ff] transition-all duration-300"></span></a><a class="flex-1 flex flex-col items-center justify-center h-full gap-0.5 text-slate-400 hover:text-cyan-300 transition-all relative" data-path="clientes" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-[11px]">Clientes</span><span class="active-indicator absolute bottom-1 h-1 w-0 rounded-full transition-all duration-300"></span></a><a class="flex-1 flex flex-col items-center justify-center h-full gap-0.5 text-slate-400 hover:text-cyan-300 transition-all relative" data-path="ajustes" href="#"><span class="material-symbols-outlined text-[22px]">settings</span><span class="font-label-sm text-[11px]">Ajustes</span><span class="active-indicator absolute bottom-1 h-1 w-0 rounded-full transition-all duration-300"></span></a></div></nav></body></html>

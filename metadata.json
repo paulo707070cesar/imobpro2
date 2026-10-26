@@ -1,0 +1,6 @@
+{
+  "name": "ImobPro CRM Brasil",
+  "description": "CRM SaaS minimalista e PWA mobile-first para corretores de imóveis no Brasil com gestão de leads, funil Kanban, alertas de follow-up e WhatsApp integrado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

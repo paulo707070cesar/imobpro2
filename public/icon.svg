@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A1A" />
+      <stop offset="100%" stop-color="#FF5500" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1F2C" />
+      <stop offset="100%" stop-color="#0E131F" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#FF6B00" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Background with smooth 120px rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle inner border -->
+  <rect x="8" y="8" width="496" height="496" rx="104" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+
+  <!-- Glowing Orange Real Estate Emblem -->
+  <g filter="url(#shadow)" transform="translate(64, 64) scale(0.75)">
+    <!-- Shield / House outline -->
+    <path d="M256 36 L432 150 V320 C432 418 356 486 256 512 C156 486 80 418 80 320 V150 Z" 
+          fill="none" 
+          stroke="url(#primaryGrad)" 
+          stroke-width="32" 
+          stroke-linejoin="round"
+          stroke-linecap="round"/>
+    
+    <!-- Modern architectural roofline / upward trend arrow -->
+    <path d="M160 270 L256 180 L352 270" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="30" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Keyhole & Growth bar -->
+    <circle cx="256" cy="320" r="32" fill="#FF6B00"/>
+    <path d="M242 336 L238 392 H274 L270 336 Z" fill="#FF6B00"/>
+    
+    <!-- Pulse spark -->
+    <circle cx="352" cy="180" r="14" fill="#00D2FF"/>
+  </g>
+</svg>
